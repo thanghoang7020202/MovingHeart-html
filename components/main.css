@@ -7,7 +7,7 @@
   body {
     height: 100%;
     /* for touch screen */
-    touch-action: none; 
+    touch-action: none;
   }
   
   body {
@@ -22,50 +22,138 @@
             transform-style: preserve-3d;
   }
   
-  #drag-container, #spin-container {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: auto;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    -webkit-transform: rotateX(-10deg);
-            transform: rotateX(-10deg);
-            z-index: 100;
-  }
-  
-  #drag-container img, #drag-container video {
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 120%;
-    max-height: 120%; 
-    line-height: 200px;
-    font-size: 50px;
-    text-align: center;
-    -webkit-box-shadow: 0 0 8px #fff;
-            box-shadow: 0 0 8px #fff;
-    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
-  }
-  
-  #drag-container img:hover, #drag-container video:hover {
-    -webkit-box-shadow: 0 0 15px #fffd;
-            box-shadow: 0 0 15px #fffd;
-    -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
-  }
-  
-  #drag-container p {
+  @media (min-width: 600px){
+    #drag-container, #spin-container {
+      position: relative;
+      align-self: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: auto;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform: rotateX(-10deg);
+              transform: rotateX(-10deg);
+              z-index: 100;
+    }
     
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%) rotateX(90deg);
-            transform: translate(-50%,-50%) rotateX(90deg);
-    color: rgb(0, 195, 255);
-    animation: fadein ease 15s;
+    #drag-container img, #drag-container video {
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 100%;
+      max-height: 100%; 
+      line-height: 200px;
+      font-size: 50px;
+      text-align: center;
+      -webkit-box-shadow: 0 0 8px #fff;
+              box-shadow: 0 0 8px #fff;
+      -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    }
+    
+    #drag-container img:hover, #drag-container video:hover {
+      -webkit-box-shadow: 0 0 15px #fffd;
+              box-shadow: 0 0 15px #fffd;
+      -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+    }
+    #drag-container p { 
+      position: absolute;
+      align-self: center;
+      size: 120%;
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+              transform: translate(-50%,-50%) rotateX(90deg);
+      color: rgb(0, 136, 255);
+      animation: fadein ease 15s;
+    }
+    #canvas {
+      background-color: transparent;   
+      color: transparent; 
+      margin: 0;
+      overflow: hidden;
+      background-repeat: no-repeat;
+    }
+    #canva {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        overflow: hidden;
+    }
+    p {
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Rampart One', cursive;
+      font-size: 4vw;
+    }
+  }
+  @media (max-width: 599px){
+    #drag-container, #spin-container {
+      position: relative;
+      align-self: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: auto;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform: rotateX(-10deg);
+              transform: rotateX(-10deg);
+              z-index: 100;
+    }
+    
+    #drag-container img, #drag-container video {
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-width: 100%;
+      max-height: 100%; 
+      line-height: 200px;
+      font-size: 50px;
+      text-align: center;
+      -webkit-box-shadow: 0 0 8px #fff;
+              box-shadow: 0 0 8px #fff;
+      -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+    }
+    
+    #drag-container img:hover, #drag-container video:hover {
+      -webkit-box-shadow: 0 0 30px #fffd;
+              box-shadow: 0 0 30px #fffd;
+      -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0007);
+    }
+    #drag-container p { 
+      position: absolute;
+      align-self: center;
+      top: 100%;
+      left: 50%;
+      -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+              transform: translate(-50%,-50%) rotateX(90deg);
+      color: rgb(255, 17, 0);
+      animation: fadein ease 15s;
+    }
+    #canvas {
+      background-color: transparent;   
+      color: transparent; 
+      margin: -50%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      width: 300%;
+    }
+    #canva {
+        position: absolute;
+        top: -65%;
+        width: 100%;
+        overflow: inherit;
+    }
+    p {
+      font-family: 'Dancing Script', cursive;
+      font-family: 'Rampart One', cursive;
+      font-size: 6vw;
+    }
   }
 
   @keyframes fadein {
@@ -134,29 +222,6 @@
               transform: rotateY(0deg);
     }
   }
-
-  #canvas {
-    background-color:transparent;   
-    color: transparent; 
-    margin: 0;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    width: 100vw;
-  }
-
-
-#canva {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    overflow: hidden;
-}
-
-p {
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Rampart One', cursive;
-    font-size: 4vw;
-}
 
 audio { 
   width: 200px;
