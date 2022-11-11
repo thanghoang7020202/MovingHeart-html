@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You</title>
+  <link rel="shortcut icon" href="heart-beat.png" type="image/x-icon">
+  <link rel="stylesheet" href="./components/myHeart.css">
+  <link rel="stylesheet" href="./components/main.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="drag-container">
+    <div id="spin-container">
+      <img src="./components/img/img1.jpg" alt="">
+      <img src="./components/img/img2.jpg" alt="">
+      <img src="./components/img/img3.jpg" alt="">
+      <img src="./components/img/img4.jpg" alt="">
+      <img src="./components/img/img5.jpg" alt="">
+      <img src="./components/img/img6.jpg" alt="">
+      <img src="./components/img/img7.jpg" alt="">
+      <img src="./components/img/img8.jpg" alt="">
+
+      <p>♡ MY LOVELY WIFE ♡</p>
+
+
+    </div>
+    <div id="ground"></div>
+  </div>
+  <div id="music-container">
+  </div>
+  <div id="canva">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <div id="mydiv">
+    <div id="mydivheader">Vua long em chua!</div>
+    <button type="button" class="btn btn-warning" onclick="warningAlert()">Warning!</button>
+    <button type="button" class="btn btn-light" onclick="location.href='myHeart.html'">Older version?</button>
+    <div>
+      <audio src="./components/music/Wo ai ni.mp3" controls>
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        <embed src="./components/music/Wo ai ni.mp3" width="180" height="90" hidden="true" />
+      </audio>
+    </div>
+  </div>
+  <script src="./components/myHeart.js"></script>
+  <script src="./components/main.js"></script>
+</body>
+
+</html>
